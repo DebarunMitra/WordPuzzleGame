@@ -9,7 +9,7 @@
     <title>WordPuzzle</title>
   </head>
   <body>
-  <div class="container">
+  <div class="container firstContainer" style="display:block">
     <div class="row justify-content-md-center">
       <div class="col col-md-1"></div>
     <div class="head-bar">
@@ -20,7 +20,7 @@
     <div id="lpt" class="row justify-content-md-center">
       <div class="col col-md-2"></div>
       <div>
-          <p class="level">LEVEL-<i class="l-count">1</i></p>
+          <p class="level">LEVEL:<i class="l-count"></i></p>
       </div>
       <div class="col-1"></div>
       <div>
@@ -65,12 +65,28 @@
     </div>
     <div class="row justify-content-md-center">
       <div class="col col-md-2"></div>
-      <div>
+      <div class="bottomBtn">
         <input  type="button" class="clear" name="clear" value="CLEAR">
-        <input  type="button" class="cleck" name="check" value="CHECK">
-        <input  type="button" class="next" name="next" value="NEXT">
+        <input  type="button" class="check" name="check" value="CHECK">
+        <input  type="button" class="prev" name="prev" value="PREV" style="display:none;">
       </div>
       <div class="col col-md-2"></div>
+    </div>
+  </div>
+  <div class="container secondContainer" style="display:none">
+    <div class="row justify-content-md-center">
+      <div class="col col-md-1"></div>
+    <div class="head-bar">
+          <p>WORD PUZZLE GAME</p>
+    </div>
+    <div class="col col-md-1"></div>
+    </div>
+    <div class="row justify-content-md-center">
+      <div class="col col-md-2"></div>
+    <div >
+      <img class="image" src="" alt="successImage">
+    </div>
+    <div class="col col-md-2"></div>
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
