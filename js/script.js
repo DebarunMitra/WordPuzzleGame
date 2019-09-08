@@ -1,4 +1,4 @@
-let val='',qc=0,point=0,level=0;
+let val='',qc=0,point=0,level=0,cc=0;
 function uniueChar(value)
 {
   val=val+value;
@@ -7,8 +7,7 @@ function uniueChar(value)
 $(document).ready(function(){
   let timeCount,point,n=1,charSet,hints,hintsCount=1;
   let mainFunction=function(){
-      //$('#lpt,.hints-box-position,#charSetButton,.hints-count-position,#clickedChar,.character-button,.bottomBtn').css("display", "block");
-    val='';level=level+1;
+    val='';level=level+1;cc=0;
     $('.hc').html(hintsCount);
     $('.hints').html(puzQue[qc].h1);
     $('.l-count').html(puzQue[qc].level);
@@ -16,8 +15,9 @@ $(document).ready(function(){
     charSet=puzQue[qc].charset.split(' ');
     $("#charSetButton").empty();
     $.each(charSet,function(k,v){
-      let btn='<input class="character-button" onclick="uniueChar(this.value)"  type="button" value="'+v+'">';
+      let btn='<input class="character-button" onclick="uniueChar(this.value)" style="background-color:'+colors[cc]+'"  type="button" value="'+v+'">';
       $('#charSetButton').append(btn);
+      cc=cc+1;
     });
   };
         mainFunction();
@@ -35,7 +35,7 @@ $(document).ready(function(){
   });
   $('.clear').click(function(){
     $("#clickedChar").html('Guess The Word');
-    val='';
+    val='';cc=0;
   });
   $('.check').click(function(){
     if($('#clickedChar').html()===puzQue[qc].word && level<=1)

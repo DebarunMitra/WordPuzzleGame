@@ -4,7 +4,7 @@
 }
 .head-bar
 {
-  background-color: seagreen;
+  background-color: OrangeRed;
   border-radius:30px;
   color:white;
   line-height:50px;
@@ -16,15 +16,40 @@
   height:60px;
   opacity: 0.9;
 }
+.firstContainer
+{
+  background-color:LightGray;
+  border-radius: 40px;
+}
+.counting-bar
+{
+  font-family: cursive;
+  font-size: 15px;
+  color:Indigo;
+}
+.buttons
+{
+  border-radius: 10px;
+  border: none;
+  font-family: cursive;
+  color:white;
+}
 .hints-position
 {
   margin-top: 30px;
+}
+#clickedChar
+{
+  font-family: cursive;
+  font-size: 15px;
+  color:DodgerBlue;
 }
 .hints
 {
   font-size: 20px;
   font-family: cursive;
   width: 100%;
+  color:red;
 }
 .char-set-position
 {

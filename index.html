@@ -20,15 +20,15 @@
     <div id="lpt" class="row justify-content-md-center">
       <div class="col col-md-2"></div>
       <div>
-          <p class="level">LEVEL:<i class="l-count"></i></p>
+          <p class="level counting-bar">LEVEL:<i class="l-count"></i></p>
       </div>
       <div class="col-1"></div>
       <div>
-          <p>POINT:10000</p>
+          <p class="point counting-bar">POINT:10000</p>
       </div>
       <div class="col-1"></div>
         <div>
-          <p class="time">TIME:<i class="t-sec">0</i></p>
+          <p class="time counting-bar">TIME:<i class="t-sec">0</i></p>
         </div>
         <div class="col col-md-2"></div>
     </div>
@@ -48,17 +48,17 @@
     <div class="row justify-content-md-center hints-count-position">
       <div class="col col-md-3"></div>
       <div>
-        <input class="hintsBtn"  type="button" name="" value="Hints Button">
+        <input class="buttons hintsBtn btn-warning"  type="button" value="Hints">
       </div>
       <div class="col col-md-1"></div>
         <div>
-          <p >Hints Count:<i class="hc">0</i></p>
+          <p class="counting-bar">Hints No:<i class="hc">0</i></p>
         </div>
         <div class="col col-md-3"></div>
     </div>
     <div class="row justify-content-md-center">
       <div class="col col-md-2"></div>
-    <div >
+    <div>
         <p id="clickedChar" class="col-md-auto">Guess The Word</p>
     </div>
     <div class="col col-md-2"></div>
@@ -66,9 +66,8 @@
     <div class="row justify-content-md-center">
       <div class="col col-md-2"></div>
       <div class="bottomBtn">
-        <input  type="button" class="clear" name="clear" value="CLEAR">
-        <input  type="button" class="check" name="check" value="CHECK">
-        <input  type="button" class="prev" name="prev" value="PREV" style="display:none;">
+        <input  type="button" class="buttons clear btn-primary" name="clear" value="CLEAR">
+        <input  type="button" class="buttons check btn-success" name="check" value="CHECK">
       </div>
       <div class="col col-md-2"></div>
     </div>
