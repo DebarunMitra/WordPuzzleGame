@@ -11,38 +11,51 @@
   <body>
   <div class="container">
     <div class="row justify-content-md-center">
+      <div class="col col-md-1"></div>
+    <div class="head-bar">
+          <p>WORD PUZZLE GAME</p>
+    </div>
+    <div class="col col-md-1"></div>
+    </div>
+    <div id="lpt" class="row justify-content-md-center">
       <div class="col col-md-2"></div>
-    <div class="">
-          <p>WORD PUZZEL GAME</p>
-    </div>
-    <div class="col col-md-2"></div>
-    </div>
-    <div class="row justify-content-md-center">
-      <div class="col col-md-3"></div>
+      <div>
+          <p class="level">LEVEL-<i class="l-count">1</i></p>
+      </div>
+      <div class="col-1"></div>
       <div>
           <p>POINT:10000</p>
       </div>
-      <div class="col col-md-1"></div>
+      <div class="col-1"></div>
         <div>
-          <p>TIME:2:00</p>
+          <p class="time">TIME:<i class="t-sec">0</i></p>
         </div>
-        <div class="col col-md-3"></div>
+        <div class="col col-md-2"></div>
     </div>
-    <div class="row justify-content-md-center">
+    <div class="row justify-content-md-center hints-box-position">
       <div class="col col-md-2"></div>
     <div class="">
-        <p class="col-md-auto">-----------Character Set---------------</p>
+        <p class="hints">-----------Hints Box-------------</p>
     </div>
     <div class="col col-md-2"></div>
     </div>
     <div class="row justify-content-md-center">
       <div class="col col-md-2"></div>
-    <div class="">
-        <p class="col-md-auto">-----------Hints Box---------------</p>
+        <div class="d-flex justify-content-center char-set-position">
+<input class="character-button"  type="button" name="" value="P">
+<input class="character-button"  type="button" name="" value="L">
+<input class="character-button"  type="button" name="" value="Q">
+<input class="character-button" type="button" name="" value="I">
+<input class="character-button" type="button" name="" value="H">
+<input class="character-button" type="button" name="" value="O">
+<input class="character-button" type="button" name="" value="W">
+<input class="character-button" type="button" name="" value="N">
+<input class="character-button" type="button" name="" value="K">
+<input class="character-button" type="button" name="" value="S">
     </div>
     <div class="col col-md-2"></div>
     </div>
-    <div class="row justify-content-md-center">
+    <div class="row justify-content-md-center hints-count-position">
       <div class="col col-md-3"></div>
       <div>
         <input  type="button" name="" value="Hints Button">
@@ -56,14 +69,14 @@
     <div class="row justify-content-md-center">
       <div class="col col-md-2"></div>
     <div >
-        <p class="col-md-auto">------------Answer Input------------</p>
+        <p class="col-md-auto">a</p>
     </div>
     <div class="col col-md-2"></div>
     </div>
     <div class="row justify-content-md-center">
       <div class="col col-md-2"></div>
       <div>
-        <input  type="button" name="" value="Hints Button">
+        <input  type="button" name="" value="CHECK">
       </div>
       <div class="col col-md-2"></div>
     </div>
@@ -71,6 +84,7 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <script src="js/script.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/puzzleData.js"></script>
   </body>
 </html>
