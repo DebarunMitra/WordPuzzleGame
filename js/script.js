@@ -1,3 +1,8 @@
+/*
+Author: Debarun Mitra
+Technology Used: HTML, CSS, JavaScript, JQuery, Bootstrap
+Objective: Create word puzzel game
+*/
 let val='',qc=0,point=0,level=0,cc=0,bonus=5;
 function uniueChar(value)
 {
@@ -6,7 +11,7 @@ function uniueChar(value)
 }
 $(document).ready(function(){
   let timeCount,n=1,charSet,hints,hintsCount=1;
-  //console.log(puzQue.length);
+  /*letter set start*/
   let mainFunction=function(){
     val='';level=qc+1;cc=0;
     if(qc<puzQue.length)
@@ -38,6 +43,8 @@ $(document).ready(function(){
     }
   };
         mainFunction();
+          /*letter set stop*/
+            /*hints start*/
   $('.hintsBtn').click(function(){
     if(puzQue[qc-1].noh>hintsCount)
     {
@@ -50,6 +57,8 @@ $(document).ready(function(){
       $('.hints').html('You Have Taken All Hints');
       }
   });
+  /*hints stop*/
+  /*clear guess start*/
   $('.clear').click(function(){
     $("#clickedChar").html('Guess The Word');
     val='';cc=0;
@@ -68,9 +77,13 @@ $(document).ready(function(){
       $('.image').attr("src","images/wrong.jpg");
     }
   });
+  /*clear guess stop*/
+  /*game restart start*/
   $('.image').click(function(){
       location.reload();
   });
+    /*game restart stop*/
+      /*time update start*/
   let timeUpdate = function() {
     $('.t-sec').each(function() {
      timeCount = parseInt($(this).html());
@@ -80,4 +93,5 @@ $(document).ready(function(){
     });
   };
   setInterval(timeUpdate, 1000);
+      /*time update stop*/
 });
