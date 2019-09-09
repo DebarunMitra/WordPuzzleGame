@@ -1,33 +1,50 @@
-let val='',qc=0,point=0,level=0,cc=0;
+let val='',qc=0,point=0,level=0,cc=0,bonus=5;
 function uniueChar(value)
 {
   val=val+value;
   document.getElementById('clickedChar').innerHTML=val;
 }
 $(document).ready(function(){
-  let timeCount,point,n=1,charSet,hints,hintsCount=1;
+  let timeCount,n=1,charSet,hints,hintsCount=1;
+  //console.log(puzQue.length);
   let mainFunction=function(){
-    val='';level=level+1;cc=0;
-    $('.hc').html(hintsCount);
-    $('.hints').html(puzQue[qc].h1);
-    $('.l-count').html(puzQue[qc].level);
-    $("#clickedChar").html('Guess The Word');
-    charSet=puzQue[qc].charset.split(' ');
-    $("#charSetButton").empty();
-    $.each(charSet,function(k,v){
-      let btn='<input class="character-button" onclick="uniueChar(this.value)" style="background-color:'+colors[cc]+'"  type="button" value="'+v+'">';
-      $('#charSetButton').append(btn);
-      cc=cc+1;
-    });
+    val='';level=qc+1;cc=0;
+    if(qc<puzQue.length)
+    {
+      $('.hc').html(hintsCount);
+      $('.hints').html(puzQue[qc].h1);
+      $('.l-count').html(puzQue[qc].level);
+      $('.gamePoint').html(point);
+      $("#clickedChar").html('Guess The Word');
+      charSet=puzQue[qc].charset.split(' ');
+      $("#charSetButton").empty();
+      $.each(charSet,function(k,v){
+        let btn='<input class="character-button" onclick="uniueChar(this.value)" style="background-color:'+colors[cc]+'"  type="button" value="'+v+'">';
+        $('#charSetButton').append(btn);
+        cc=cc+1;
+      });
+      qc=qc+1;
+    }
+    else if (level===(puzQue.length+1)){
+      $('.firstContainer').css("display","none");
+      $('.secondContainer').css("display","block");
+      $('.image').attr("src","images/success.gif");
+    }
+    else {
+      point=0;
+      $('.firstContainer').css("display","none");
+      $('.secondContainer').css("display","block");
+      $('.image').attr("src","images/wrong.jpg");
+    }
   };
         mainFunction();
   $('.hintsBtn').click(function(){
-    if(puzQue[qc].noh>hintsCount)
+    if(puzQue[qc-1].noh>hintsCount)
     {
       hintsCount=hintsCount+1;
       $('.hc').html(hintsCount);
-      $('.hints').html(puzQue[qc]["h"+hintsCount]);
-      n=hintsCount;
+      $('.hints').html(puzQue[qc-1]["h"+hintsCount]);
+      n=hintsCount;bonus=bonus-1;
     }
     else {
       $('.hints').html('You Have Taken All Hints');
@@ -38,18 +55,14 @@ $(document).ready(function(){
     val='';cc=0;
   });
   $('.check').click(function(){
-    if($('#clickedChar').html()===puzQue[qc].word && level<=1)
+    if($('#clickedChar').html()===puzQue[qc-1].word && level<=puzQue.length)
     {
-      qc=qc+1;hintsCount=1;
+      hintsCount=1;point=point+100*bonus;
       mainFunction();
-    }
-    else if (level===2) {
-      $('.firstContainer').css("display","none");
-      $('.secondContainer').css("display","block");
-      $('.image').attr("src","images/success.gif");
     }
     else
     {
+      point=0;
       $('.firstContainer').css("display","none");
       $('.secondContainer').css("display","block");
       $('.image').attr("src","images/wrong.jpg");
