@@ -16,6 +16,6 @@ Create a word puzzle game
 ##### 7) For correct guesses, you gain points and you go to the next level.
 ##### 8) For wrong guess game will be over, and you need to play from start.
 ## Image:
-![Drag Racing](images/wordPuzzelImage.PNG)
+![Word Puzzle](images/wordPuzzelImage.PNG)
 ## Visit
 [WordPuzzleGame](https://debarunmitra.github.io/WordPuzzleGame/)
